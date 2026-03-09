@@ -302,7 +302,6 @@ export function BuyContent({
                                         <div className="flex flex-wrap gap-2">
                                             {variants.map((v) => {
                                                 const isSelected = v.id === selectedVariantId
-                                                const vPrice = Number(v.price)
                                                 return (
                                                     <Button
                                                         key={v.id}
@@ -313,9 +312,6 @@ export function BuyContent({
                                                         onClick={() => setSelectedVariantId(v.id)}
                                                     >
                                                         {v.variantLabel || v.id}
-                                                        <span className="ml-1.5 tabular-nums opacity-90">
-                                                            {vPrice}
-                                                        </span>
                                                     </Button>
                                                 )
                                             })}
